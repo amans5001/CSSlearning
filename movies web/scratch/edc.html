@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDC PROJECT</title>
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #countdown {
+            font-size: 24px;
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Please Fill the above form</h1>
+
+    <form id="Form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+        <br>
+        <button type="button" onclick="DAYS()">Calculate</button>
+    </form>
+
+    <div id="countdown"></div>
+
+    <script>
+        function DAYS() {
+            var name = document.getElementById('name').value;
+            var dob = new Date(document.getElementById('dob').value);
+            var today = new Date();
+            dob.setFullYear(today.getFullYear());
+            if (today > dob) {
+                dob.setFullYear(today.getFullYear() + 1);
+            }
+            var remaining = Math.ceil((dob - today) / (1000 * 60 * 60 * 24));
+            var countdownElement = document.getElementById('countdown');
+            countdownElement.innerHTML = name + "'s birthday is in " + remaining + " days.";
+        }
+    </script>
+
+</body>
+
+</html>

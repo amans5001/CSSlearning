@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(135, 198, 240);
+            height: 200vh;
+            width: 90vw;
+            font-size: 7vh;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .box1 {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(26, 165, 230);
+            height: 150px;
+            width: 150px;
+            order:4;
+            /* float: right; */
+        }
+
+        .box2 {
+            margin: 0;
+            padding: 0;
+            background-color: red;
+            height: 150px;
+            width: 150px;
+            /* float: right;
+            clear: right; */
+        }
+
+        .box3 {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(188, 216, 63);
+            height: 150px;
+            width: 150px;
+            /* float: left; */
+        }
+
+        .box4 {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(29, 110, 8);
+            height: 150px;
+            width: 150px;
+            /* float: right; */
+            /* clear: right; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box3">Box3</div>
+        <div class="box4">Box4</div>
+    </div>
+
+</body>
+
+</html>

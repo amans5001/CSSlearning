@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman's Video Store</title>
+    <link rel="shortcut icon" type="x-icon" href="logo1.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(43, 44, 46);
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .movie-list {
+            margin-bottom: 40px;
+        }
+
+        .movie-cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .movie-card {
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Aman's Video Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li>
+                    <form class="example" action="/search" style="margin:auto;max-width:300px">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main-content">
+        <div class="movie-list">
+            <h2>Featured Movies</h2>
+            <div class="movie-cards" id="featured-movies">
+                <!-- Featured Movie Cards will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="movie-list">
+            <h2>Popular Movies</h2>
+            <div class="movie-cards" id="popular-movies">
+                <!-- Popular Movie Cards will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aman's Video Store</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

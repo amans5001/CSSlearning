@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman's Video Store</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo1.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(160, 161, 161);
+            margin: 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        header img {
+            height: auto;
+            width: 100%;
+            max-width: 300px;
+            border:s rgb(148, 53, 53) solid;}
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .movie-list {
+            margin-bottom: 40px;
+        }
+
+        .movie-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .movie-card {
+            width: calc(33.33% - 20px); /* Three columns, adjust as needed */
+            max-width: 250px; /* Maximum width for each card */
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form.example {
+            margin: 20px auto;
+            max-width: 300px;
+            display: flex;
+        }
+
+        form.example input[type=text] {
+            flex: 1;
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            padding: 10px;
+            background: #000000;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #000000;
+        }
+
+        header marquee img {
+            margin-right: 0px;
+   
+            height: 20vh;
+        width:auto;    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="a1.png">
+        <marquee direction="left" scrollamount="5" loop="infinite">
+            <img src="/MoviesLogo/m1.jpg">
+            <img src="/MoviesLogo/m2.jpg">
+            <img src="/MoviesLogo/m3.jpg">
+            <img src="/MoviesLogo/m4.jpg">
+            <img src="/MoviesLogo/m5.jpg">
+            <img src="/MoviesLogo/m6.jpg">
+            <img src="/MoviesLogo/m7.jpg">
+            <img src="/MoviesLogo/m8.jpg">
+            <img src="/MoviesLogo/m9.jpg">
+            <img src="/MoviesLogo/m10.jpg">
+        </marquee>
+        <nav>
+            <ul>
+                <li><a>Movies</a></li>
+                <li><a>TV Shows</a></li>
+                <li><a>Home</a></li>
+                <li>
+                    <form class="example" action="/search">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit">Search</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="main-content">
+        <div class="movie-list">
+            <h2>Featured Movies</h2>
+            <div class="movie-cards" id="featured-movies">
+                <!-- Featured Movie Cards will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="movie-list">
+            <h2>Popular Movies</h2>
+            <div class="movie-cards" id="popular-movies">
+                <!-- Popular Movie Cards will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aman's Video Store</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
